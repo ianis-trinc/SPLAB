@@ -1,0 +1,7 @@
+D:\Uni\SPLAB\SPLAB\SPLAB\bin\Debug\SPLAB.exe.config
+D:\Uni\SPLAB\SPLAB\SPLAB\bin\Debug\SPLAB.exe
+D:\Uni\SPLAB\SPLAB\SPLAB\bin\Debug\SPLAB.pdb
+D:\Uni\SPLAB\SPLAB\SPLAB\obj\Debug\SPLAB.csproj.AssemblyReference.cache
+D:\Uni\SPLAB\SPLAB\SPLAB\obj\Debug\SPLAB.csproj.CoreCompileInputs.cache
+D:\Uni\SPLAB\SPLAB\SPLAB\obj\Debug\SPLAB.exe
+D:\Uni\SPLAB\SPLAB\SPLAB\obj\Debug\SPLAB.pdb
