@@ -7,24 +7,23 @@ using System.Xml.Schema;
 
 namespace SPLAB
 {
-    public class Chapter
+    internal class Chapter : Section
     {
         private string name;
         private List<SubChapter> subChapters = new List<SubChapter>();
 
-        Chapter(Chapter other) { this.name = other.name; }
+        public Chapter(Chapter other) { this.name = other.name; }
         public Chapter() { }
-        public Chapter(string name)
+
+        public Chapter(string title) : base(title)
         {
-            this.name = name;
-        }   
-        
-        public string GetName() {  return name; }
-        public void SetName(string name) { this.name = name; }
+        }
+
+        public string Name { get { return this.name; } set { this.name = value; } }
 
         public int CreateSubChapter(string subChapterName)
         {
-            this.subChapters.Add(new SubChapter(subChapterName));
+            subChapters.Add(new SubChapter(subChapterName));
             return subChapters.Count;
         }
 
