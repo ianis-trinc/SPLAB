@@ -11,10 +11,11 @@ namespace SPLAB
     public class SubChapter
     {
         private string name;
-        private Element element;
         private List<Paragraph> paragraphs = new List<Paragraph>();
         private List<Image> images = new List<Image>();
         private List<Table> tables = new List<Table>();
+
+        public string Name { get { return this.name; } set { this.name = value; } }
         public SubChapter() { }
         public SubChapter(string name)
         {
@@ -24,8 +25,8 @@ namespace SPLAB
         public void Print()
         {
             Console.WriteLine($"Subchapter: {name}");
-            foreach (var paragraph in paragraphs) { Console.WriteLine($"Paragraph: {paragraph.GetText()}"); }
-            foreach(var image in images) { Console.WriteLine($"Image with name: {image.GetImageName()}"); }
+            foreach (var paragraph in paragraphs) { Console.WriteLine($"Paragraph: {paragraph.Text}"); }
+            foreach(var image in images) { Console.WriteLine($"Image with name: {image.ImageName}"); }
             foreach(var table in tables) { Console.WriteLine($"Table with Title: {table.GetTitle()}"); }
 
         }

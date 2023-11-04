@@ -6,8 +6,29 @@ using System.Threading.Tasks;
 
 namespace SPLAB
 {
-    public class TableOfContent
+    internal class TableOfContent : Element
     {
-        public void Print() { }
+        private string _bookTitle;
+        public string BookTitle { get { return _bookTitle; } set { _bookTitle = value; } }
+
+        public override void Add(Element element)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Element Get(int index)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Print()
+        { 
+            Console.WriteLine("Table Of Content"); 
+        }
+
+        public override void Remove(Element element)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
