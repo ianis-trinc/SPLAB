@@ -8,16 +8,16 @@ namespace SPLAB
 {
     public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Book noapteBuna = new Book("Noapte buna, copii!");
-            Author rpGheo = new Author("Radu Pavel Gheo");
+            var noapteBuna = new Book("Noapte buna, copii!");
+            var rpGheo = new Author("Radu Pavel Gheo");
             noapteBuna.AddAuthor(rpGheo);
 
-            Section cap1 = new Section("Capitolul 1");
-            Section cap11 = new Section("Capitolul 1.1");
-            Section cap111 = new Section("Capitolul 1.1.1");
-            Section cap1111 = new Section("Capitolul 1.1.1.1");
+            var cap1 = new Section("Capitolul 1");
+            var cap11 = new Section("Capitolul 1.1");
+            var cap111 = new Section("Capitolul 1.1.1");
+            var cap1111 = new Section("Capitolul 1.1.1.1");
             noapteBuna.AddContent(new Paragraph("Multumesc celor care ..."));
             noapteBuna.AddContent(cap1);
             cap1.Add(new Paragraph("Moto capitol"));

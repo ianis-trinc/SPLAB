@@ -8,9 +8,9 @@ namespace SPLAB
 {
     internal class Table : Element
     {
-        public string title;
+        public string Title { get; set; }
         public Table() { }
-        public Table(string title) { this.title = title; }
+        public Table(string title) { this.Title = title; }
 
         public override void Add(Element element)
         {
@@ -22,9 +22,9 @@ namespace SPLAB
             throw new NotImplementedException();
         }
 
-        public string GetTitle() { return title; }
+        public string GetTitle() { return Title; }
 
-        public override void Print() { Console.WriteLine($"Table title: {title}"); }
+        public override void Print() { Console.WriteLine($"Table title: {Title}"); }
 
         public override void Remove(Element element)
         {

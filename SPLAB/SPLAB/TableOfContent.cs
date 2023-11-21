@@ -8,8 +8,7 @@ namespace SPLAB
 {
     internal class TableOfContent : Element
     {
-        private string _bookTitle;
-        public string BookTitle { get { return _bookTitle; } set { _bookTitle = value; } }
+        public string BookTitle { get; set; }
 
         public override void Add(Element element)
         {

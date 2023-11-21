@@ -8,23 +8,23 @@ namespace SPLAB
 {
     internal class Section : Element
     {
-        private string title;
-        public string Title { get { return title; } set { title = value; } }
-        public List<Element> elements = new List<Element>();
-        public Section() { }
-        public Section(string title) { this.title = title; }
+        protected string Title { get; set; }
+
+        protected List<Element> Elements = new List<Element>();
+        protected Section() { }
+        public Section(string title) { this.Title = title; }
 
         public override void Add(Element element)
         {
 
-            elements.Add(element);
+            Elements.Add(element);
         }
 
         public override void Remove(Element element)
         {
             if (element is Section section)
             {
-                elements.Remove(section);
+                Elements.Remove(section);
             }
             else
             {
@@ -34,9 +34,9 @@ namespace SPLAB
 
         public override Element Get(int index)
         {
-            if (index >= 0 && index < elements.Count)
+            if (index >= 0 && index < Elements.Count)
             {
-                return elements[index];
+                return Elements[index];
             }
             else
             {
@@ -47,7 +47,7 @@ namespace SPLAB
         public override void Print()
         {
             Console.WriteLine(Title);
-            foreach(var element in elements)
+            foreach(var element in Elements)
             {
                 element.Print();
             }

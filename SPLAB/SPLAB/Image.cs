@@ -9,16 +9,16 @@ namespace SPLAB
 {
     internal class Image : Element
     {
-        private string imageName;
-        public string ImageName { get { return imageName; } set { this.imageName = value; } }
+        private string ImageName { get; set; }
+
         public Image() { } 
         public Image(string imageName)
         {
-            this.imageName = imageName;
+            this.ImageName = imageName;
         }
 
        
-        public override void Print() { Console.WriteLine(imageName); }
+        public override void Print() { Console.WriteLine(ImageName); }
 
 
         public override void Add(Element element)

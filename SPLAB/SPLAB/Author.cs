@@ -9,15 +9,14 @@ namespace SPLAB
 {
     public class Author
     {
-        private string _name;
-        private string _surName;
-        public string Name { get { return _name; } set { _name = value; } }
-        public string SurName { get { return _surName; } set { _surName = value; } }
-       
+        public string Name { get; set; }
+
+        public string SurName { get; set; }
+
         public Author() { }
-        public Author(string name) { this._name = name; }
+        public Author(string name) { this.Name = name; }
 
        
-        public void Print() { Console.Write(this._name); }
+        public void Print() { Console.Write(this.Name); }
     }
 }
