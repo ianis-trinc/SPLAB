@@ -26,9 +26,7 @@ namespace SPLAB
             throw new NotImplementedException();
         }
 
-        public override Element Get(int index)
-        {
-            throw new NotImplementedException();
-        }
+        public override Element Get(int index) => throw new NotImplementedException();
+        
     }
 }
