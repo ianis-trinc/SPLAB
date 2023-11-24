@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SPLAB
+﻿namespace SPLAB
 {
     public class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             var noapteBuna = new Book("Noapte buna, copii!");
             var rpGheo = new Author("Radu Pavel Gheo");
