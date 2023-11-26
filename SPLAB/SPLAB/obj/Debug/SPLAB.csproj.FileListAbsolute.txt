@@ -12,3 +12,8 @@ D:\Uni\SP\SPLAB\SPLAB\SPLAB\obj\Debug\SPLAB.csproj.AssemblyReference.cache
 D:\Uni\SP\SPLAB\SPLAB\SPLAB\obj\Debug\SPLAB.csproj.CoreCompileInputs.cache
 D:\Uni\SP\SPLAB\SPLAB\SPLAB\obj\Debug\SPLAB.exe
 D:\Uni\SP\SPLAB\SPLAB\SPLAB\obj\Debug\SPLAB.pdb
+D:\Uni\SP\SPLAB\SPLAB\SPLAB\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Uni\SP\SPLAB\SPLAB\SPLAB\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+D:\Uni\SP\SPLAB\SPLAB\SPLAB\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Uni\SP\SPLAB\SPLAB\SPLAB\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+D:\Uni\SP\SPLAB\SPLAB\SPLAB\obj\Debug\SPLAB.csproj.CopyComplete

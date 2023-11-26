@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace SPLAB
 {
-    class ImageContent
+    internal class ImageContent
     {
+        private string _imageContent;
+        public ImageContent(string url)
+        {
+            _imageContent = $"imageContent fom {url}";
+        }
+
+        public ImageContent GetImageContent() { return this; }
     }
 }

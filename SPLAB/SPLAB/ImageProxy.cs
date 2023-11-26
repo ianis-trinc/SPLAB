@@ -6,23 +6,16 @@ using System.Threading.Tasks;
 
 namespace SPLAB
 {
-    internal class Image : Element
+    internal class ImageProxy : Element
     {
         private string _url;
-        private ImageContent _content;
-
-        public Image(string url)
-        {
-            _url = url;
-            _content = new ImageContent(_url);
-        }
+        private Image _realImage;
+        public ImageProxy(string url) { _url = url; }
 
         public override void Add(Element element)
         {
-           // throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
-
-        public ImageContent content() { return _content.GetImageContent(); }
 
         public override Element Get(int index)
         {
@@ -38,5 +31,16 @@ namespace SPLAB
         {
             throw new NotImplementedException();
         }
+
+        public Image LoadImage()
+        {
+            if(_realImage == null)
+            {
+                _realImage = new Image(_url);
+            }
+
+            return _realImage;
+        }
+
     }
 }
