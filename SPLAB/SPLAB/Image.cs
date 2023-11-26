@@ -1,32 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SPLAB
 {
-    internal class Image : Element
+    internal class Image
     {
-        private string ImageName { get; set; }
+        private string _url;
+        private ImageContent _content;
 
-        public Image() { } 
-        public Image(string imageName)
+        public Image(string url)
         {
-            this.ImageName = imageName;
+            _url = url;
+            _content = new ImageContent(_url);
         }
 
-       
-        public override void Print() { Console.WriteLine(ImageName); }
-
-
-        public override void Add(Element element)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Remove(Element element)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override Element Get(int index) => throw new NotImplementedException();
-        
+        public ImageContent content() { return _content.GetImageContent(); }
     }
 }
