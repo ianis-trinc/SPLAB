@@ -8,23 +8,14 @@ namespace SPLAB
         public Table() { }
         public Table(string title) { this.Title = title; }
 
-        public override void Add(Element element)
-        {
-            throw new NotImplementedException();
-        }
+        public override void Add(Element element) => throw new NotImplementedException();
 
-        public override Element Get(int index)
-        {
-            throw new NotImplementedException();
-        }
+        public override Element Get(int index) => throw new NotImplementedException();
 
         public string GetTitle() { return Title; }
 
-        public override void Print() { Console.WriteLine($"Table title: {Title}"); }
+        public override void Print() => Console.WriteLine($"Table title: {Title}"); 
 
-        public override void Remove(Element element)
-        {
-            throw new NotImplementedException();
-        }
+        public override void Remove(Element element) => throw new NotImplementedException();
     }
 }

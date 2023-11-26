@@ -1,28 +1,41 @@
-﻿namespace SPLAB
+﻿using System;
+
+namespace SPLAB
 {
     public class Program
     {
         private static void Main()
         {
-            var noapteBuna = new Book("Noapte buna, copii!");
-            var rpGheo = new Author("Radu Pavel Gheo");
-            noapteBuna.AddAuthor(rpGheo);
+            var startTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+            ImageProxy img1 = new ImageProxy("Pamela Anderson");
+            ImageProxy img2 = new ImageProxy("Kim Kardashian");
+            ImageProxy img3 = new ImageProxy("Kirby Griffin");
 
-            var cap1 = new Section("Capitolul 1");
-            var cap11 = new Section("Capitolul 1.1");
-            var cap111 = new Section("Capitolul 1.1.1");
-            var cap1111 = new Section("Capitolul 1.1.1.1");
-            noapteBuna.AddContent(new Paragraph("Multumesc celor care ..."));
-            noapteBuna.AddContent(cap1);
-            cap1.Add(new Paragraph("Moto capitol"));
-            cap1.Add(cap11);
-            cap11.Add(new Paragraph("Text from subchapter 1.1"));
-            cap11.Add(cap111);
-            cap111.Add(new Paragraph("Text from subchapter 1.1.1"));
-            cap111.Add(cap1111);
-            cap1111.Add(new Image("Image subchapter 1.1.1.1"));
+            Section playboyS1 = new Section("Front Cover");
+            playboyS1.Add(img1);
 
-            noapteBuna.Print();
+            Section playboyS2 = new Section("Summer Girls");
+            playboyS2.Add(img2);
+            playboyS2.Add(img3);
+
+            Book playboy = new Book("Playboy");
+            playboy.Add(playboyS1);
+            playboy.Add(playboyS2);
+
+            var endTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+            // var creationTime = endTime - startTime;
+            Console.WriteLine($"Creation of the content took {endTime - startTime} milliseconds");
+
+            startTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+
+            playboyS1.Print();
+            endTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+            Console.WriteLine($"Printing of the section 1 took {endTime - startTime} milliseconds");
+
+            startTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+            playboyS1.Print();
+            endTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+            Console.WriteLine($"Printing again the section 1 took {endTime - startTime} milliseconds");
         }
     }
 }
