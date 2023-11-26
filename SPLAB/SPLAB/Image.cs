@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SPLAB
@@ -14,6 +15,7 @@ namespace SPLAB
         public Image(string url)
         {
             _url = url;
+            Thread.Sleep(1000);
             _content = new ImageContent(_url);
         }
 
