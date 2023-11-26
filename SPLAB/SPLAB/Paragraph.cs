@@ -5,7 +5,7 @@ namespace SPLAB
     internal class Paragraph : Element
     {
         public string Text { get; set; }
-
+        private IAlignStrategy _alignStrategy;
         public Paragraph() { }
         public Paragraph(string text)
         {
@@ -26,6 +26,12 @@ namespace SPLAB
         public override Element Get(int index)
         {
             return this;
+        }
+
+        public void SetAlignStrategy(IAlignStrategy alignStrategy)
+        {
+            _alignStrategy = alignStrategy;
+            _alignStrategy.Render(this);
         }
     }
 }
